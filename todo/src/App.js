@@ -3,11 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Secret from './components/Secret';
+import Form from './components/Form';
+import NotFound from './components/NotFound';
 
 class App extends React.Component {
- state = {};
+ state = {
+  show: false,
+  username: '',
+  password: '',
+ };
 
- hundleLogin = () => {};
+ hundleLogin = e => {
+  e.preventDefault();
+  this.setState({ show: !this.state.show });
+ };
+
+ handleSubmit = e => {
+  e.preventDefault();
+ };
+
+ handleChange = e => {
+  this.setState({ [e.target.name]: e.target.value });
+ };
 
  render() {
   return (
