@@ -11,19 +11,6 @@ class App extends React.Component {
   auth,
  };
 
- hundleLogin = e => {
-  e.preventDefault();
-  this.setState({ show: !this.state.show });
- };
-
- handleSubmit = e => {
-  e.preventDefault();
- };
-
- handleChange = e => {
-  this.setState({ [e.target.name]: e.target.value });
- };
-
  render() {
   return (
    <div className="App">
