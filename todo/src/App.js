@@ -16,6 +16,11 @@ class App extends React.Component {
   return (
    <div className="App">
     <Switch>
+     <Route
+      exact
+      path="/"
+      render={props => <LoginPage auth={this.state.auth} />}
+     />
      <Route path="/callback" component={Callback} />
      <Route path="*" component={NotFound} />
     </Switch>
