@@ -2,6 +2,9 @@
 
 // linter doesn't let us use resticted-globals
 
+// 'auth0-js' is just a wrapper around all the auth0 API
+// it provides us with some methods that we can use to login, check if user is authenticated, and etc
+
 import auth0 from 'auth0-js';
 import React from 'react';
 
@@ -25,6 +28,18 @@ class Auth extends React.Component {
  }
 
  // 1. create auth0 property. Initialize the project
+ //  Initialize:
+ //   var auth0 = new auth0.WebAuth({
+ //     domain: '{YOUR_AUTH0_DOMAIN}',
+ //     clientID: '{YOUR_AUTH0_CLIENT_ID}'
+ //   });
+ //    auth0.authorize({
+ //     audience: 'https://mystore.com/api/v2',
+ //     scope: 'read:order write:order',
+ //     responseType: 'token',
+ //     redirectUri: 'https://example.com/auth/callback'
+ //    });
+
  auth0 = new auth0.WebAuth({
   domain: APP_DOMAIN,
   clientID: CLIENT_ID,
