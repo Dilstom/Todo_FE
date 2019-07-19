@@ -24,7 +24,7 @@ class Auth extends React.Component {
  constructor(props) {
   super(props);
   this.state = {};
-  this.login = this.login.bind(this);
+  this.login = this.login.bind(this); // bind new method to the right context
  }
 
  // 1. create auth0 property. Initialize the project
@@ -34,8 +34,8 @@ class Auth extends React.Component {
  //     clientID: '{YOUR_AUTH0_CLIENT_ID}'
  //   });
  //    auth0.authorize({
- //     audience: 'https://mystore.com/api/v2',
- //     scope: 'read:order write:order',
+ //     audience: 'https://mystore.com/api/v2', // <-- is an endpoint to get some user info
+ //     scope: 'read:order write:order',        // <--- what we will passing or add in the token
  //     responseType: 'token',
  //     redirectUri: 'https://example.com/auth/callback'
  //    });
@@ -49,21 +49,23 @@ class Auth extends React.Component {
   scope: SCOPE,
  });
 
+ // 2. login method
  login() {
   this.auth0.authorize();
  }
 
+ // 3. take all the info in the query and parse the data
  handleAuthentication() {
   this.auth0.parseHash((err, authResults) => {
    if (authResults && authResults.accessToken && authResults.idToken) {
     let expiresAt = JSON.stringify(
      authResults.expiresIn * 1000 + new Date().getTime()
-    );
+    ); // check when it is going to expire
     localStorage.setItem(' access_token', authResults.accessToken);
     localStorage.setItem('id_token', authResults.idToken);
     localStorage.setItem('expires_at', expiresAt);
-    location.hash = '';
-    location.pathname = LOGIN_SUCCESS_PAGE;
+    location.hash = ''; // make sure to remove all the info from query string
+    location.pathname = LOGIN_SUCCESS_PAGE; // and redirect a user to a page on success
    } else if (err) {
     location.pathname = LOGIN_FAILURE_PAGE;
     console.log(err);
@@ -71,10 +73,10 @@ class Auth extends React.Component {
   });
  }
 
+ // 4. for this method just use 'expires_at' value stored in localStorage
  isAuthenticated() {
-  // for this method just use 'expires_at' value stored in localStorage
   let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-  // and check if that value is greater than the current time stamp
+  // and check if that value is still greater than the current time stamp
   return new Date().getTime() < expiresAt;
  }
 
