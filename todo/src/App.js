@@ -6,6 +6,9 @@ import Secret from './components/Secret';
 import Form from './components/Form';
 import NotFound from './components/NotFound';
 import Callback from './components/Callback';
+import Auth from './Auth';
+
+const auth = new Auth();
 
 class App extends React.Component {
  state = {
