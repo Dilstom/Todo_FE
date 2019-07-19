@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Secret from './components/Secret';
 import Form from './components/Form';
 import NotFound from './components/NotFound';
+import Callback from './components/Callback';
 
 class App extends React.Component {
  state = {
@@ -15,8 +16,7 @@ class App extends React.Component {
   return (
    <div className="App">
     <Switch>
-     <Route exact path="/" component={Form} />
-     <Route exact path="/secret" component={Secret} />
+     <Route path="/callback" component={Callback} />
      <Route path="*" component={NotFound} />
     </Switch>
    </div>
