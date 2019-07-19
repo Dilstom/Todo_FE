@@ -12,11 +12,11 @@ class App extends React.Component {
  render() {
   return (
    <div className="App">
-    <header className="App-header">
-     <img src={logo} className="App-logo" alt="logo" />
-     <div>Please, login to see the content</div>
-     <button onClick={this.hundleLogin}>Login</button>
-    </header>
+    <Switch>
+     <Route exact path="/" component={Form} />
+     <Route exact path="/secret" component={Secret} />
+     <Route path="*" component={NotFound} />
+    </Switch>
    </div>
   );
  }
