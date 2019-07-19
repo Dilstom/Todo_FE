@@ -9,6 +9,7 @@ class Secret extends React.Component {
    <div>
     <h1>Secret!!!</h1>
     <Link to="/">Home</Link>
+    <button onClick={this.props.auth.logout}>Logout</button>
    </div>
   );
  }
