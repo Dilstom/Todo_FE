@@ -8,9 +8,7 @@ import NotFound from './components/NotFound';
 
 class App extends React.Component {
  state = {
-  show: false,
-  username: '',
-  password: '',
+  auth,
  };
 
  hundleLogin = e => {
