@@ -21,6 +21,13 @@ class App extends React.Component {
       path="/"
       render={props => <LoginPage auth={this.state.auth} />}
      />
+     {/* secure "/secret" route by validating if the user is authenticated or not */}
+     <Route
+      path="/secret"
+      render={props =>
+       auth.isAuthenticated() ? <Secret auth={this.state.auth} /> : <Prompt />
+      }
+     />
      <Route path="/callback" component={Callback} />
      <Route path="*" component={NotFound} />
     </Switch>
