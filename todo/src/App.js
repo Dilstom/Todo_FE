@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Secret from './components/Secret';
-import Form from './components/Form';
+import LoginPage from './components/LoginPage';
 import NotFound from './components/NotFound';
+import Prompt from './components/Prompt';
 import Callback from './components/Callback';
 import Auth from './Auth';
 
