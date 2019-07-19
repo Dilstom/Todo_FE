@@ -6,7 +6,7 @@ class NotFound extends React.Component {
   this.state = {};
  }
  render() {
-  return <div>Page Not Found :(</div>;
+  return <div>Please, login to see this page :)</div>;
  }
 }
 
