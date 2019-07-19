@@ -7,13 +7,14 @@ class LoginPage extends React.Component {
   this.state = {};
  }
  render() {
-  console.log(this.props);
+  console.log(this.props.auth.getProfile());
   return (
    <div>
-    <div>Hello User!</div>
+    <div>Hello {this.props.auth.getProfile().given_name || 'User'}!</div>
     <p>
      Content: <Link to="/secret">Secret Content</Link>
     </p>
+    {/* display the login button only when the user is unauthenticated*/}
     {!this.props.auth.isAuthenticated() && (
      <div>
       <h6>Please, login first to see the content</h6>
