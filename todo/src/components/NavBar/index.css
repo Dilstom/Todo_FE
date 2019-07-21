@@ -1,0 +1,30 @@
+.navbar {
+ background-color: #202374;
+}
+
+.navBarw a {
+ color: white;
+ text-decoration: none;
+}
+/* .navBarw a:not([href]):not([tabindex]) {
+ color: white;
+ text-decoration: none;
+} */
+
+.navBarLeft .btn-light {
+ color: #202374;
+ border-radius: 1rem;
+}
+.navBarLeft .btn-light:hover {
+ color: #202374;
+}
+
+.navBarLeft a:not([href]):not([tabindex]) {
+ color: white;
+ margin-right: 2rem;
+}
+.navBarLeft a:not([href]):not([tabindex]):hover {
+ color: white;
+ cursor: pointer;
+ font-weight: 450;
+}
