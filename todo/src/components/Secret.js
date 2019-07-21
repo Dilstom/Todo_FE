@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LeftNav from './LeftNav/LeftNav';
+import NavBar from './NavBar/NavBar';
 import MainContent from './MainContent/MainContent';
 
 class Secret extends React.Component {
@@ -9,10 +9,7 @@ class Secret extends React.Component {
   //   console.log('props in secret: ', this.props);
   return (
    <div>
-    <LeftNav />
-    <h1>Secret!!!</h1>
-    <Link to="/">Home</Link>
-    <button onClick={this.props.auth.logout}>Logout</button>
+    <NavBar logout={this.props.auth.logout} />
 
     <div>
      <MainContent />
