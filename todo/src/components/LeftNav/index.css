@@ -1,0 +1,14 @@
+.navbar {
+ background-color: #202374;
+}
+
+a:not([href]):not([tabindex]) {
+ color: white;
+}
+
+.btn-light {
+ color: #202374;
+}
+.btn-light:hover {
+ color: #202374;
+}
