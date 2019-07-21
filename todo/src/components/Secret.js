@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import LeftNav from './LeftNav/LeftNav';
+import MainContent from './MainContent/MainContent';
 
 class Secret extends React.Component {
  state = {};
@@ -10,6 +12,11 @@ class Secret extends React.Component {
     <h1>Secret!!!</h1>
     <Link to="/">Home</Link>
     <button onClick={this.props.auth.logout}>Logout</button>
+
+    <div>
+     <LeftNav />
+     <MainContent />
+    </div>
    </div>
   );
  }
