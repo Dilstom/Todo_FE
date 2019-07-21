@@ -1,0 +1,22 @@
+.cardWrapper .card {
+ border: 1px solid #d9dafc;
+ border-radius: 1rem;
+ margin-bottom: 1rem;
+}
+@media only screen and (max-width: 610px) {
+ .cardWrapper .card {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+ }
+}
+
+.cardWrapper .card .card-title,
+.card-text {
+ text-align: left;
+}
+
+.displayFlex {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
