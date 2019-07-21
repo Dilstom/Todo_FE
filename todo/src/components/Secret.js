@@ -9,12 +9,12 @@ class Secret extends React.Component {
   //   console.log('props in secret: ', this.props);
   return (
    <div>
+    <LeftNav />
     <h1>Secret!!!</h1>
     <Link to="/">Home</Link>
     <button onClick={this.props.auth.logout}>Logout</button>
 
     <div>
-     <LeftNav />
      <MainContent />
     </div>
    </div>
