@@ -12,7 +12,7 @@ class LoginPage extends React.Component {
    <div>
     <div>Hello {this.props.auth.getProfile().given_name || 'User'}!</div>
     <p>
-     Content: <Link to="/secret">Secret Content</Link>
+     Welcome to: <Link to="/secret">Notes</Link>
     </p>
     {/* display the login button only when the user is unauthenticated*/}
     {!this.props.auth.isAuthenticated() && (
