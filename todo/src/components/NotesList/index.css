@@ -13,6 +13,15 @@
 .cardWrapper .card .card-title,
 .card-text {
  text-align: left;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ max-height: 5.5rem;
+}
+.cardWrapper .card .card-title {
+ white-space: nowrap;
+ text-align: left;
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
 
 .displayFlex {
