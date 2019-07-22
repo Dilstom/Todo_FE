@@ -30,9 +30,11 @@ class NavBar extends React.Component {
       <a className="aTag" onClick={this.props.logout}>
        Logout
       </a>
-      <button className="btn btn-light my-2 my-sm-0" type="submit">
+      <Link to="/secret" className="btn btn-light my-2 my-sm-0">
+       {/* <button type="submit"> */}
        View Your Notes
-      </button>
+       {/* </button> */}
+      </Link>
       <button className="btn btn-light my-2 my-sm-0 ml-2" type="submit">
        + Create New Note
       </button>
