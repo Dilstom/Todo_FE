@@ -3,6 +3,7 @@
  border-radius: 1rem;
  margin-bottom: 1rem;
 }
+
 @media only screen and (max-width: 610px) {
  .cardWrapper .card {
   margin: 0 auto;
@@ -28,4 +29,15 @@
  display: flex;
  flex-wrap: wrap;
  justify-content: space-between;
+}
+
+.linkId,
+.linkId:hover {
+ text-decoration: none;
+ color: black;
+ cursor: pointer;
+}
+
+.cardBotton {
+ margin-top: 1rem;
 }
