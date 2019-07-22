@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
+import NoteView from './NoteView/NoteView';
 import MainContent from './MainContent/MainContent';
 
 class Secret extends React.Component {
@@ -11,9 +12,8 @@ class Secret extends React.Component {
    <div>
     <NavBar logout={this.props.auth.logout} />
 
-    <div>
-     <MainContent />
-    </div>
+    <MainContent />
+    {/* <Route path="/secret/note/:id" component={NoteView} /> */}
    </div>
   );
  }
