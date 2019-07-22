@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Secret from './components/Secret';
 import LoginPage from './components/LoginPage';
+import NoteView from './components/NoteView/NoteView';
 import NotFound from './components/NotFound';
 import Prompt from './components/Prompt';
 import Callback from './components/Callback';
@@ -26,10 +27,15 @@ class App extends React.Component {
      />
      {/* secure "/secret" route by validating if the user is authenticated or not */}
      <Route
+      exact
       path="/secret"
       render={props =>
        auth.isAuthenticated() ? <Secret auth={this.state.auth} /> : <Prompt />
       }
+     />
+     <Route
+      path="/secret/note/:id"
+      render={props => <NoteView auth={this.state.auth} />}
      />
      <Route path="/callback" component={Callback} />
      <Route path="*" component={NotFound} />
