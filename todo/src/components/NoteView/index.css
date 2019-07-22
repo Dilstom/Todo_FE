@@ -1,0 +1,10 @@
+.cardWrapperNV {
+ margin: 0 1rem;
+}
+
+.cardWrapperNV .card {
+ margin: 0 auto;
+ border: 1px solid #d9dafc;
+ border-radius: 1rem;
+ margin-bottom: 1rem;
+}

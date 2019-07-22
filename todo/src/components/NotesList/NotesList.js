@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 class NotesList extends React.Component {
@@ -11,14 +12,18 @@ class NotesList extends React.Component {
   return (
    <div className="card" style={{ width: '18rem' }}>
     <div className="card-body">
-     <h5 className="card-title">{this.props.item.name}</h5>
-     <p className="card-text">{this.props.item.body}</p>
-     <a href="#" className="card-link">
-      Card link
-     </a>
-     <a href="#" className="card-link">
-      Another link
-     </a>
+     <Link to={`/secret/note/${this.props.item.id}`} className="linkId">
+      <h5 className="card-title">{this.props.item.name}</h5>
+      <p className="card-text">{this.props.item.body}</p>
+     </Link>
+     <div className="cardBotton">
+      <a href="#" className="card-link">
+       Card link
+      </a>
+      <a href="#" className="card-link">
+       Another link
+      </a>
+     </div>
     </div>
    </div>
   );
