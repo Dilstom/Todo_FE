@@ -8,3 +8,17 @@
  border-radius: 1rem;
  margin-bottom: 1rem;
 }
+
+.cardWrapperNV .card-title,
+.card-text {
+ text-align: left;
+}
+.displayFlexRight {
+ margin: 1rem 2rem;
+ display: flex;
+ justify-content: flex-end;
+}
+.displayFlexRight a:not([href]):not([tabindex]) {
+ text-decoration: underline;
+ cursor: pointer;
+}
