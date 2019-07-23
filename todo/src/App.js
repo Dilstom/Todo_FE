@@ -8,6 +8,7 @@ import NotFound from './components/NotFound';
 import Prompt from './components/Prompt';
 import Callback from './components/Callback';
 import Auth from './Auth';
+import CreateNote from './components/CreateNote/CreateNote';
 
 const auth = new Auth();
 
@@ -49,7 +50,23 @@ class App extends React.Component {
      />
      <Route
       path="/secret/note/:id"
-      render={props => <NoteView {...props} auth={this.state.auth} />}
+      render={props =>
+       auth.isAuthenticated() ? (
+        <NoteView {...props} auth={this.state.auth} />
+       ) : (
+        <Prompt />
+       )
+      }
+     />
+     <Route
+      path="/create"
+      render={props =>
+       auth.isAuthenticated() ? (
+        <CreateNote {...props} auth={this.state.auth} />
+       ) : (
+        <Prompt />
+       )
+      }
      />
      <Route path="/callback" component={Callback} />
      <Route path="*" component={NotFound} />
