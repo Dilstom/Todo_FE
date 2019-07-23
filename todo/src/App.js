@@ -19,7 +19,7 @@ class App extends React.Component {
  };
 
  componentDidMount() {
-  fetch('https://jsonplaceholder.typicode.com/comments/')
+  fetch('https://jsonplaceholder.typicode.com/posts/')
    .then(response => response.json())
    .then(json => {
     let top10 = json.slice(0, 10);
