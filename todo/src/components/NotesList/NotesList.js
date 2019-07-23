@@ -8,11 +8,17 @@ class NotesList extends React.Component {
   this.state = {};
  }
  render() {
-  console.log('props in NotesList: ', this.props);
+  //   console.log('props in NotesList: ', this.props);
   return (
    <div className="card" style={{ width: '18rem' }}>
     <div className="card-body">
-     <Link to={`/secret/note/${this.props.item.id}`} className="linkId">
+     <Link
+      to={{
+       pathname: `/secret/note/${this.props.item.id}`,
+       state: this.props.item, // pass data from one route to another using `state`
+      }}
+      className="linkId"
+     >
       <h5 className="card-title">{this.props.item.name}</h5>
       <p className="card-text">{this.props.item.body}</p>
      </Link>
