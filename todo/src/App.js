@@ -14,7 +14,17 @@ const auth = new Auth();
 class App extends React.Component {
  state = {
   auth,
+  notes: [],
  };
+
+ componentDidMount() {
+  fetch('https://jsonplaceholder.typicode.com/comments/')
+   .then(response => response.json())
+   .then(json => {
+    let top10 = json.slice(0, 10);
+    this.setState({ notes: top10 });
+   });
+ }
 
  render() {
   return (
@@ -30,12 +40,16 @@ class App extends React.Component {
       exact
       path="/secret"
       render={props =>
-       auth.isAuthenticated() ? <Secret auth={this.state.auth} /> : <Prompt />
+       auth.isAuthenticated() ? (
+        <Secret auth={this.state.auth} notes={this.state.notes} />
+       ) : (
+        <Prompt />
+       )
       }
      />
      <Route
       path="/secret/note/:id"
-      render={props => <NoteView auth={this.state.auth} />}
+      render={props => <NoteView {...props} auth={this.state.auth} />}
      />
      <Route path="/callback" component={Callback} />
      <Route path="*" component={NotFound} />
