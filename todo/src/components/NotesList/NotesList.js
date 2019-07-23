@@ -19,7 +19,7 @@ class NotesList extends React.Component {
       }}
       className="linkId"
      >
-      <h5 className="card-title">{this.props.item.name}</h5>
+      <h5 className="card-title">{this.props.item.title}</h5>
       <p className="card-text">{this.props.item.body}</p>
      </Link>
      <div className="cardBotton">
