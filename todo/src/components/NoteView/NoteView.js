@@ -14,7 +14,7 @@ class NoteView extends React.Component {
    <div>
     <NavBar logout={this.props.auth.logout} />
     <div className="cardWrapperNV">
-     <div className="card" style={{ maxWidth: '48rem' }}>
+     <div className="card" style={{ maxWidth: '40rem' }}>
       <div className="displayFlexRight">
        <a className="mr-4">edit</a>
        <a>delete</a>
