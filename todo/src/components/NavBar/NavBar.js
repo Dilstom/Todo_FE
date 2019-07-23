@@ -24,9 +24,13 @@ class NavBar extends React.Component {
        View Your Notes
        {/* </button> */}
       </Link>
-      <button className="btn btn-light my-2 my-sm-0 ml-2" type="submit">
+      <Link to="/create" className="btn btn-light my-2 my-sm-0 ml-2">
+       {/* <button type="submit"> */}+ Create New Note
+       {/* </button> */}
+      </Link>
+      {/* <button className="btn btn-light my-2 my-sm-0 ml-2" type="submit">
        + Create New Note
-      </button>
+      </button> */}
      </div>
     </nav>
    </div>
