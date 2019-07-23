@@ -10,9 +10,9 @@ class Secret extends React.Component {
   //   console.log('props in secret: ', this.props);
   return (
    <div>
-    <NavBar logout={this.props.auth.logout} />
+    <NavBar logout={this.props.auth.logout} notes={this.props.notes} />
 
-    <MainContent />
+    <MainContent notes={this.props.notes} />
     {/* <Route path="/secret/note/:id" component={NoteView} /> */}
    </div>
   );
