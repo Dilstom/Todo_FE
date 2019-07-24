@@ -18,8 +18,10 @@
  display: flex;
  justify-content: flex-end;
 }
-.displayFlexRight a:not([href]):not([tabindex]) {
+/* .displayFlexRight a:not([href]):not([tabindex]) { */
+.displayFlexRight a {
  text-decoration: underline;
  cursor: pointer;
  font-weight: bold;
+ color: black;
 }
