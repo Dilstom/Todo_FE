@@ -19,10 +19,16 @@ class DeleteNote extends React.Component {
      {/* <ModalHeader toggle={this.props.toggle}>Modal title</ModalHeader> */}
      <ModalBody>Are you sure you want to delete this note?</ModalBody>
      <ModalFooter>
-      <Button color="#C30505" onClick={this.props.handleDelete}>
+      <Button
+       style={{ backgroundColor: '#C30505' }}
+       onClick={this.props.handleDelete}
+      >
        Delete
       </Button>{' '}
-      <Button color="#202374" onClick={this.props.toggle}>
+      <Button
+       style={{ backgroundColor: '#202374' }}
+       onClick={this.props.toggle}
+      >
        No
       </Button>
      </ModalFooter>
