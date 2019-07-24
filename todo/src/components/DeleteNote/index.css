@@ -1,0 +1,15 @@
+.modal-footer .btn-secondary {
+ width: 8rem;
+ margin-left: 2rem;
+}
+
+.modal-footer {
+ justify-content: center;
+ border-top: none;
+ margin-bottom: 2rem;
+}
+
+.modal-body {
+ text-align: center;
+ margin: 2rem auto 0rem;
+}
