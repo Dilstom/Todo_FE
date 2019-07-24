@@ -9,6 +9,7 @@ import Prompt from './components/Prompt';
 import Callback from './components/Callback';
 import Auth from './Auth';
 import CreateNote from './components/CreateNote/CreateNote';
+import EditNote from './components/EditNote/EditNote';
 
 const auth = new Auth();
 
@@ -63,6 +64,16 @@ class App extends React.Component {
       render={props =>
        auth.isAuthenticated() ? (
         <CreateNote {...props} auth={this.state.auth} />
+       ) : (
+        <Prompt />
+       )
+      }
+     />
+     <Route
+      path="/edit"
+      render={props =>
+       auth.isAuthenticated() ? (
+        <EditNote {...props} auth={this.state.auth} />
        ) : (
         <Prompt />
        )
