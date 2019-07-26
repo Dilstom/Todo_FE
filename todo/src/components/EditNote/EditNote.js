@@ -38,7 +38,7 @@ class EditNote extends React.Component {
  };
 
  render() {
-  //   console.log('props in EditNote: ', this.props);
+  console.log('props in EditNote: ', this.props);
   console.log('state title in EditNote: ', this.state.title);
   console.log('state body in EditNote: ', this.state.body);
   return (
@@ -53,7 +53,7 @@ class EditNote extends React.Component {
          {/* <label for="exampleFormControlInput1">Note Title</label> */}
          <input
           //  `Using value={whatever} will make it immutable. You should use defaultValue={this.props.location.state.title}`
-          defaultValue={this.props.location.state.title} // populate value from props
+          defaultValue={this.state.title} // populate value from props
           type="text"
           name="title"
           className="form-control"
@@ -65,7 +65,7 @@ class EditNote extends React.Component {
         <div className="form-group">
          {/* <label for="exampleFormControlTextarea1">Note Content</label> */}
          <textarea
-          defaultValue={this.props.location.state.body}
+          defaultValue={this.state.body}
           name="body"
           onChange={this.handleChange}
           className="form-control"
