@@ -1,0 +1,32 @@
+.loginPage {
+ min-height: 100%;
+ background-color: #202374;
+ color: white;
+ font-size: 3rem;
+ vertical-align: center;
+ display: flex;
+ justify-content: center;
+}
+
+.loginPage button {
+ background-color: white;
+ /* color: white; */
+ color: #202374;
+ font-size: 1.1rem;
+ border-radius: 0.5rem;
+ padding: 0rem 2rem;
+}
+.loginPage a {
+ color: white;
+}
+
+.loginPageContent {
+ align-self: center;
+}
+.loginPage .getStarted a {
+ color: #202374;
+}
+.loginPage .getStarted a:hover {
+ color: #202374;
+ text-decoration: none;
+}
